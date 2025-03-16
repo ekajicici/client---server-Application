@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Chat</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        text-align: center;
+      }
+      h1 {
+        color: #fff;
+        font-size: 2.5rem;
+      }
+      input {
+        width: 300px;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        text-align: center;
+      }
+      button {
+        background: #ff6b81;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #ff4757;
+      }
+      #chatbox {
+        width: 80%;
+        max-width: 400px;
+        height: 250px;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real-time Chat</h1>
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button id="sendMessage">Send</button>
+    <div id="chatbox">Chat started...</div>
+    <script src="client.js"></script>
+  </body>
+</html>
